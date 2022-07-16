@@ -3,10 +3,10 @@ This repository contains code and data to replicate the experiments and plots in
 # Structure
 
 The repository is divided into 4 main folders:
-* `utils_folder` which contains all the code and functions to replicate the analysis. In particular, each method considered has its own `.py` file.
-* `Final_Synthetic_Experiments` which contains example usage on synthetic datasets
-* `Final_Cancer_Experiments` which contains data and code to run and fit models on TCGA cancer data, and reproduce plots.
-* `Final_gnomAD` which contains data and code to run and fit models on the gnomAD dataset, and reproduce plots.
+* `utils_folder/` which contains all the code and functions to replicate the analysis. In particular, each method considered has its own `.py` file.
+* `Synthetic/` which contains example usage on synthetic datasets
+* `Cancer/` which contains data and code to run and fit models on TCGA cancer data, and reproduce plots.
+* `gnomAD/` which contains data and code to run and fit models on the gnomAD dataset, and reproduce plots.
 
 ```
 |____gnomAD
