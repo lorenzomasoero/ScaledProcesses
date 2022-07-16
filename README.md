@@ -31,7 +31,7 @@ The repository is divided into 4 main folders:
 
 # Data description
 
-Both folders related to the real data applications contain data to fit the models and reproduce the analysis. In particular:
+Both `Final_Cancer_Experiments/` and `Final_gnomAD/data` contain data to fit the models and reproduce the analysis. In particular:
 
 * `Final_Cancer_Experiments/data/TCGA` contains 33 datasets from the [TCGA project](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga). 
 Each dataset refers to a specific [cancer type](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/tcga-study-abbreviations), and is a binary matrix with shape `N, K` where `N` is the number of patients in the dataset with cancer of the specific type, and `K` is a gene, targeted by cancer. The `(n,k)` entry is equal to 1 if patient `n` showed variation within gene `k`. Additional details on this data are discussed in Appendix F of "[More for less: Predicting and maximizing genetic variant discovery via Bayesian nonparametrics" (Masoero et al., Biometrika 2022)](https://arxiv.org/pdf/1912.05516.pdf).
