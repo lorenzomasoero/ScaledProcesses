@@ -8,6 +8,7 @@ The repository is divided into 4 main folders:
 * `Final_Cancer_Experiments` which contains data and code to run and fit models on TCGA cancer data, and reproduce plots.
 * `Final_gnomAD` which contains data and code to run and fit models on the gnomAD dataset, and reproduce plots.
 
+```
 |____Final_gnomAD
 | |____Plots.ipynb
 | |____Fit.ipynb
@@ -26,6 +27,7 @@ The repository is divided into 4 main folders:
 | |____results
 | |____Plots
 |____utils_folder
+```
 
 # Data description
 
