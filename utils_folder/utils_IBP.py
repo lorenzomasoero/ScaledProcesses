@@ -53,11 +53,12 @@ class IBP():
             p = self.parameter_new(alpha,c,sigma,n)
             newz = np.random.poisson(p)
             unseen[n] = newz
+
         counts = unseen.cumsum().astype(int) # cumulative sum of news
         fa = np.zeros(counts[-1], dtype = int)
-        low = counts[0]
-        fa[:low] = 1 # these are the features sampled at first round
-        
+        low = counts[1]
+        fa[:low] = 1    
+    
         if store_matrix ==  True:
             bin_mat = np.zeros([self.N, counts[-1]], dtype = int)
             bin_mat[0,:low] = 1
