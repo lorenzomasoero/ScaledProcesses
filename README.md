@@ -38,13 +38,13 @@ Each dataset refers to a specific [cancer type](https://gdc.cancer.gov/resources
 * `Final_gnomAD/data` contains 15 folders, each folder referring to a different subpopulation in the data collected by the [gnomAD project](https://gnomad.broadinstitute.org/news/2018-10-gnomad-v2-1/). Each folder contains data about the subpopulation organized in three subfolders 
 	* `cts/` contains four datasets: 
 		* `all.txt`, a single accumulation curve for the subpopulation, which at position `n` (for a fixed ordering of all the individuals samples) the total number of distinct variants observed in the first `n` individuals
-		* `N_50.npy`, an array of size `(50,51)`. Each row of this array is an accumulation curve for the population under study, obtained by retaining a random subset of 50 samples from the population. The first value (first column) is 0 by construction.
-		* `N_100.npy`, an array of size `(50,101)`. Each row of this array is an accumulation curve for the population under study, obtained by retaining a random subset of 100 samples from the population. The first value (first column) is 0 by construction.
-		* `N_200.npy`, an array of size `(50,201)`. Each row of this array is an accumulation curve for the population under study, obtained by retaining a random subset of 200 samples from the population. The first value (first column) is 0 by construction.
-** `sfs/` contains three datasets:
-*** `N_50.npy`, an array of size `(50,51)`. Each row of this array is the site-frequency-spectrum for the population under study obtained by retaining a random subset of 50 samples from the population. The first entry (first column) is the number of variants not observed yet. Notice, the corresponding accumulation curve is the corresponding row in the `cts/` folder for the same file.
-*** `N_100.npy`, an array of size `(50,51)`. Each row of this array is the site-frequency-spectrum for the population under study obtained by retaining a random subset of 100 samples from the population. The first entry (first column) is the number of variants not observed yet. Notice, the corresponding accumulation curve is the corresponding row in the `cts/` folder for the same file.
-*** `N_200.npy`, an array of size `(50,51)`. Each row of this array is the site-frequency-spectrum for the population under study obtained by retaining a random subset of 200 samples from the population. The first entry (first column) is the number of variants not observed yet. Notice, the corresponding accumulation curve is the corresponding row in the `cts/` folder for the same file.
+		* `N_50.npy`, an array of size `(50,51)`. Each row of this array is an accumulation curve for the population under study, obtained by retaining a random subset of 50 samples (without replacement) from the subpopulation. The first value (first column) is 0 by construction.
+		* `N_100.npy`, an array of size `(50,101)`. As above but now for 100 random samples.
+		* `N_200.npy`, an array of size `(50,201)`. As above but now for 200 random samples.
+	* `sfs/` contains three datasets:
+		* `N_50.npy`, an array of size `(50,51)`. Each row of this array is the site-frequency-spectrum for the population under study obtained by retaining a random subset of 50 samples from the population. The first entry (first column) is the number of variants not observed yet. Notice, the corresponding accumulation curve is the corresponding row in the `cts/` folder for the same file.
+		* `N_100.npy`, as above but now for 100 random samples.
+		* `N_200.npy`, as above but now for 200 random samples.
 
 # Fitting
 
