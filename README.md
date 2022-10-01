@@ -1,4 +1,4 @@
-This repository contains code and data to replicate the experiments and plots in "Scaled process priors for Bayesian nonparametric estimation of the unseen genetic variation" (https://arxiv.org/abs/2106.15480). 
+This repository contains code and data to replicate the experiments and plots in "Scaled process priors for Bayesian nonparametric estimation of the unseen genetic variation", (https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918, https://arxiv.org/abs/2106.15480). 
 
 # Structure
 
