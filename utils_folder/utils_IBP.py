@@ -267,10 +267,10 @@ class IBP():
     def make_EFPF(self, sfs, N):
         '''
         Input : 
-            sfs < array of ints, len K > true distinct counts 
+            sfs < array of ints, len K > site frequency spectrum for the first N datapoints 
             N < int > total number of observation; no entry in FA can have value above N
         Output :
-            cost_function <function>; this is Eqn (***); cost function from using norm on true_cts with n_lo = from_ and n_hi = up_to
+            cost_function <function>; this is the EFPF for the first N datapoints
                 Input : params sigma, c
                 Output : scalar loss
         '''
@@ -278,7 +278,7 @@ class IBP():
         K = sfs.sum()
         def EFPF(params):
             '''
-                Takes as input parameters and returns discrepancy of true counts and predicted counts;
+                Takes as input parameters and returns the EFPF for the 3IBP
             '''
             alpha, c, sigma = params
             cost = K * (np.log(alpha) - log_poch(c+1, N-1)) - alpha * np.exp(log_poch(c+sigma, np.arange(N)) - log_poch(c+1, np.arange(N))).sum() + np.inner(sfs, log_poch(1-sigma, np.arange(len(sfs)))) + np.inner(sfs, log_poch(c+sigma,np.arange(N - len(sfs), N )[::-1] ))
